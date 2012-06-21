@@ -9,8 +9,10 @@
 				"title":"Feed to display"
 			}
 		},
-		"form": [
-      		"datasources.main"
-      	]
+		"options": {
+			"form": [
+	      		"datasources.main"
+	      	]
+	    }
 	}
 }
