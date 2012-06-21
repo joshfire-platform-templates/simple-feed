@@ -20,6 +20,12 @@
 	      		"datasources.main",
 	      		"limit"
 	      	]
-	    }
+	    },
+	    "devices": [
+			{
+				"devices": "*",
+				"startfile": "index.html"
+			}
+		]
 	}
 }
