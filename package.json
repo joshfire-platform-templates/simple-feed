@@ -10,8 +10,15 @@
 			}
 		},
 		"options": {
+			"schema": {
+		        "limit": {
+		        	"title": "Number of items",
+		        	"type": "integer"
+		        }
+      		},
 			"form": [
-	      		"datasources.main"
+	      		"datasources.main",
+	      		"limit"
 	      	]
 	    }
 	}

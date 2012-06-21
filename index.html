@@ -8,6 +8,7 @@
 		<script src="json2.js"></script>
 		<![endif]-->
 		<script data-joshfire-bootstrap></script>
+		<!-- <script data-joshfire-bootstraped="" src="http://factory.joshfire.com/bootstrap/4fe0a697a8a07d01000011f6/4fe2ff3fd531b6010000accd/desktop/"></script> -->
 		<link rel="stylesheet" href="style.css">
 	</head>
 <body>
@@ -100,7 +101,9 @@
 			return '';
 		}
 		
-		for (i = 0; i < data.entries.length; i++) {
+		var itemNumber = (Joshfire.factory.config.app.options || {}).limit || data.entries.length;
+
+		for (i = 0; i < itemNumber; i++) {
 			entry = data.entries[i];
 			str += formatEntry(entry);
 		}
