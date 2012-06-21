@@ -1,0 +1,13 @@
+{
+	"name":"simple-feed",
+	"fullName": "Simple Feed",
+	"version":"0.1.0",
+	"description":"Display the item titles with thumbnails",
+	"joshfire":{
+		"datasources":{
+			"main":{
+				"title":"Feed to display"
+			}
+		}
+	}
+}
