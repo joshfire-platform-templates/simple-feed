@@ -52,85 +52,50 @@
 		/* Actual styles */
 
 		body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      margin: 0;
-      background: transparent;
-      font-size: 15px;
-      font-weight: 200;
-      color: #3a3a3a;
-      border: none;
+      	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		font-weight: normal;
+		line-height: 18px;
+		color: #3A3A3A;
 		}
 		
 		ul {
 			list-style-type:none;
 		}
-		li {
-			margin: 0;
-			padding: 0;
-		}
+ 
+#feed li {
+	padding-left: 10px;
+	margin-bottom: 20px;
+}
 
-    
-    #preview {
-    width:345px;
-    background-color: transparent;
-    }
+#feed li .date {
+	font-style: italic;
+} 
 
-    #preview ul li {
-    margin-bottom: 10px;
-    
-    }
-  
-		
-		#preview h4,
-		#preview .author,
-		#preview .date {
-     float: right;
-     width: 190px;
-     vertical-align: text-bottom;
-     padding: 4px 10px 0 10px;
-		}
+#feed li .title {
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 20px;
+}
 
-		#preview h4 {
-			font-weight: 600;
-			line-height: 17px;
-			padding-bottom: 4px;
-		}
+#feed li .title a {
+	text-decoration: none;
+	color: #08C;
+}
 
-		#preview .author {
-			font-style: italic;
-			font-size: small;
-		}
+#feed li .thumbnail {
+  background-size: cover;
+  width: 100px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+}
 
-		#preview .date {
-			font-size: small;
-		}
-		
-		#preview .image {
-		 float: left;
-		 border: 5px solid #d7d7d7;
-		 max-width: 120px;
-		}
-		
-		#preview ul a{
-		overflow: hidden;
-		}
-		
-		
-		#preview ul li{
-		overflow: hidden;
-			clear: both;
-		}
+#feed li a {
+	-webkit-transition: color 0.3s;
+}
 
-		
-		#preview-loadmore {
-			text-align:center;
-			line-height:40px;
-			display:block;
-			font-weight:bold;
-			font-size:1.2em;
-			margin-bottom:10px;
-		}
-		
-		#preview img {
-			max-width: 120px;
-		}
+#feed li a:hover {
+
+	color: #0069D6;
+}

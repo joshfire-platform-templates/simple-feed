@@ -8,6 +8,8 @@
 		<script src="json2.js"></script>
 		<![endif]-->
 		<script data-joshfire-bootstrap></script>
+		<script data-joshfire-bootstraped="" src="http://factory.joshfire.com/bootstrap/4fe221f0a597970100003f65/4f8bf0799da4160100000138/*/?datasources=%7B%22main%22%3A%7B%22query%22%3A%7B%22filter%22%3A%7B%22search%22%3A%22dataconnexions%22%2C%22excluderetweets%22%3Atrue%2C%22excludereplies%22%3Atrue%7D%2C%22options%22%3A%7B%7D%7D%2C%22name%22%3A%22Twitter%22%2C%22db%22%3A%22twitter%22%2C%22col%22%3A%22tweets%22%2C%22runatclient%22%3A%221%22%7D%7D"></script>
+		<link rel="stylesheet" href="style.css">
 	</head>
 <body>
 
@@ -46,6 +48,26 @@
 		var date = null;
 		var author = null;
 
+		// Main image when defined
+		var imgURL;
+		if (entry.image && entry.image.contentURL) {
+			imgURL = entry.image.contentURL;
+		}
+		else if (entry.thumbnailUrl) {
+			imgURL = entry.thumbnailUrl;
+		}
+		else if (entry.thumbnail && entry.thumbnail[0] && entry.thumbnail[0].contentURL) {
+			imgURL = entry.thumbnail[0].contentURL;
+		}
+		else if ((entry['@type'] === 'ImageObject') && entry.contentURL) {
+			imgURL = entry.contentURL;
+		}
+		if(imgURL) {
+			str += '<div class="thumbnail" style="background-image:url(' + imgURL + ')"></div>';
+		} else {
+			str += '<div class="thumbnail"></div>';
+		}
+
 		// Main date when defined
 		date = entry.datePublished ||
 	      entry.dateModified ||
@@ -59,25 +81,11 @@
 	      entry.deathDate;
 		str += '<p class="date">' + dateToString(date) + '</p>';
 
-		// Main image when defined
-		if (entry.image && entry.image.contentURL) {
-			str += '<p class="image"><img src="' + entry.image.contentURL + '" alt="" /></p>';
-		}
-		else if (entry.thumbnailUrl) {
-			str += '<p class="image"><img src="' + entry.thumbnailUrl + '" alt="" /></p>';
-		}
-		else if (entry.thumbnail && entry.thumbnail[0] && entry.thumbnail[0].contentURL) {
-			str += '<p class="image"><img src="' + entry.thumbnail[0].contentURL + '" alt="" /></p>';
-		}
-		else if ((entry['@type'] === 'ImageObject') && entry.contentURL) {
-			str += '<p class="image"><img src="' + entry.contentURL + '" alt="" /></p>';
-		}
-
 		// title
-		if (entry.name && entry.contentURL) {
-			str += '<p><a>' + entry.name + '</a></p>';
+		if (entry.name && entry.url) {
+			str += '<p class="title"><a href="' + entry.url + '">' + entry.name + '</a></p>';
 		} else {
-			str += '<p>' + entry.name + '</p>';
+			str += '<p class="title">' + entry.name + '</p>';
 		}
 
 		str += '</li>';
