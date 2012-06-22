@@ -23,7 +23,7 @@
 	    },
 	    "devices": [
 			{
-				"devices": "desktop",
+				"devices": "*",
 				"startfile": "index.html"
 			}
 		]
