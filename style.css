@@ -64,8 +64,13 @@
 		}
  
 #feed li {
+/*
 	padding-left: 10px;
-	margin-bottom: 20px;
+  margin-bottom: 12px;
+  overflow: hidden;
+*/
+  padding: 6px 0px 6px 12px;
+  overflow: hidden;
 }
 
 #feed li .date {
@@ -75,7 +80,7 @@
 #feed li .title {
 	font-size: 12px;
 	font-weight: bold;
-	line-height: 20px;
+	line-height: 16px;
 }
 
 #feed li .title a {
@@ -86,10 +91,12 @@
 #feed li .thumbnail {
   background-size: cover;
   background-position: center;
-  width: 100px;
-  height: 50px;
+  width: 90px;
+  height: 44px;
   float: left;
   margin-right: 10px;
+  box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 0.2);
+  border: 3px solid white;
 }
 
 #feed li a {
