@@ -1,7 +1,7 @@
 {
 	"name":"simple-feed",
 	"fullName": "Simple Feed",
-	"version":"0.1.0",
+	"version":"0.1.1",
 	"description":"Display the item titles with thumbnails",
 	"joshfire":{
 		"datasources":{
