@@ -101,7 +101,7 @@
 			return '';
 		}
 		
-		var itemNumber = (Joshfire.factory.config.app.options || {}).limit || data.entries.length;
+		var itemNumber = (Joshfire.factory.config.template.options || {}).limit || data.entries.length;
 
 		for (i = 0; i < itemNumber; i++) {
 			entry = data.entries[i];
